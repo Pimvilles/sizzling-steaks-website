@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import MenuItemCard, { MenuItem } from '../components/MenuItemCard';
 import { addToCart } from '../utils/cartUtils';
@@ -105,7 +104,7 @@ const menuItems: MenuItem[] = [
   },
   {
     id: 8,
-    name: "Sweet Chilli (peri peri)",
+    name: "Sweet Chilli 🌶️",
     description: "Spicy steak burger with bacon, cheese and sweet chilli sauce. Served with chips.",
     price: 90,
     sizeOptions: [
@@ -117,7 +116,7 @@ const menuItems: MenuItem[] = [
   },
   {
     id: 9,
-    name: "Shotgun (peri peri)",
+    name: "Shotgun 🌶️",
     description: "Extra spicy steak burger with bacon and cheese. Served with chips.",
     price: 90,
     sizeOptions: [
@@ -129,7 +128,7 @@ const menuItems: MenuItem[] = [
   },
   {
     id: 10,
-    name: "Chilli Cheese Steak (peri peri)",
+    name: "Chilli Cheese Steak 🌶️",
     description: "Spicy steak burger with bacon, cheese and chilli. Served with chips.",
     price: 100,
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=699&q=80",
@@ -137,7 +136,7 @@ const menuItems: MenuItem[] = [
   },
   {
     id: 11,
-    name: "The Bomb (double peri peri)",
+    name: "The Bomb 🌶️🌶️",
     description: "Double-spicy steak burger with bacon and cheese. Served with chips.",
     price: 100,
     image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
@@ -155,7 +154,7 @@ const menuItems: MenuItem[] = [
   },
   {
     id: 13,
-    name: "Spicy Chicken (peri peri)",
+    name: "Spicy Chicken 🌶️",
     description: "Spicy chicken burger with lettuce and mayo. Served with chips.",
     price: 90,
     image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
@@ -163,7 +162,7 @@ const menuItems: MenuItem[] = [
   },
   {
     id: 14,
-    name: "Chilli Cheese Chicken (peri peri)",
+    name: "Chilli Cheese Chicken 🌶️",
     description: "Spicy chicken burger with chilli and cheese. Served with chips.",
     price: 100,
     image: "https://images.unsplash.com/photo-1605402877094-c48ceaec2599?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",

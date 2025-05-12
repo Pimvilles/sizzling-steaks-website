@@ -13,7 +13,7 @@ const ChatBot: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hi there! 👋 Welcome to Steaks & Shakes. How can I help you today?",
+      text: "Hi there! 👋 Welcome to Steaks & Shakes. I'm Devon, your virtual assistant. How can I help you today?",
       isBot: true
     }
   ]);
@@ -63,31 +63,88 @@ const ChatBot: React.FC = () => {
   const handleBotResponse = (message: string): string => {
     const lowerMessage = message.toLowerCase();
     
-    if (lowerMessage.includes('menu') || lowerMessage.includes('eat') || lowerMessage.includes('food')) {
-      return "You can check our full menu by clicking on 'Our Menu' in the navigation. We have delicious steak burgers, chicken burgers, and amazing shakes!";
-    }
-    
-    if (lowerMessage.includes('hour') || lowerMessage.includes('open') || lowerMessage.includes('close')) {
-      return "We're open daily from 10:00 AM to 10:00 PM.";
-    }
-    
-    if (lowerMessage.includes('location') || lowerMessage.includes('address') || lowerMessage.includes('where')) {
-      return "We're located at 120 General Hertzog Road, Three Rivers, Vereeniging.";
-    }
-    
-    if (lowerMessage.includes('delivery') || lowerMessage.includes('deliver')) {
-      return "Yes, we offer delivery! Delivery fee is R15 for Sonlandpark and R20 for Waldrift/Unitas/Arcon Park. You can also order through Uber Eats or Mr D.";
-    }
-    
+    // Greeting patterns
     if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
-      return "Hello there! How can I help you today?";
+      return "Hello there! 😊 Welcome to Steaks & Shakes, home of The Best Burger In The Vaal! How can I assist you today?";
     }
     
+    // Menu related queries
+    if (lowerMessage.includes('menu') || lowerMessage.includes('eat') || lowerMessage.includes('food')) {
+      return "You can check our full menu by clicking on 'Our Menu' in the navigation. We have delicious steak burgers, chicken burgers, and amazing shakes! Would you like to know about our current deals too?";
+    }
+    
+    // Hours related queries
+    if (lowerMessage.includes('hour') || lowerMessage.includes('open') || lowerMessage.includes('close')) {
+      return "We're open daily from 10:00 AM to 10:00 PM. Is there anything specific you'd like to order today?";
+    }
+    
+    // Location related queries
+    if (lowerMessage.includes('location') || lowerMessage.includes('address') || lowerMessage.includes('where')) {
+      return "We're located at 120 General Hertzog Road, Three Rivers, Vereeniging. You can find directions on our Contact page. We have ample parking available!";
+    }
+    
+    // Delivery related queries
+    if (lowerMessage.includes('delivery') || lowerMessage.includes('deliver')) {
+      return "Yes, we offer delivery! Delivery fee is R15 for Sonlandpark and R20 for Waldrift/Unitas/Arcon Park. You can also order through Uber Eats or Mr D. Would you like to place an order now?";
+    }
+    
+    // Online ordering
+    if (lowerMessage.includes('order') || lowerMessage.includes('online')) {
+      return "You can order directly from our website by browsing the menu and adding items to your cart. We also partner with Uber Eats and Mr D if you prefer those platforms. Our delivery zones include Sonlandpark (R15 fee) and Waldrift/Unitas/Arcon Park (R20 fee).";
+    }
+    
+    // Payment methods
+    if (lowerMessage.includes('payment') || lowerMessage.includes('pay') || lowerMessage.includes('card')) {
+      return "We accept various payment methods including credit/debit cards via PayFast, as well as cash on delivery. All online payments are secure and encrypted.";
+    }
+    
+    // Promotions and deals
+    if (lowerMessage.includes('deal') || lowerMessage.includes('promo') || lowerMessage.includes('special')) {
+      return "Check out our 'Online Deals' page for current specials and promotions! You can also sign up for our newsletter to receive exclusive offers directly to your inbox. Would you like me to tell you how to sign up?";
+    }
+    
+    // About the restaurant
+    if (lowerMessage.includes('about') || lowerMessage.includes('story') || lowerMessage.includes('history')) {
+      return "Steaks & Shakes is a family-friendly restaurant passionate about serving the best burgers in the Vaal! We focus on quality ingredients and creating a welcoming atmosphere for all our guests. You can learn more on our 'About Us' page.";
+    }
+    
+    // Vegetarian options
+    if (lowerMessage.includes('vegetarian') || lowerMessage.includes('vegan')) {
+      return "We do offer some vegetarian options on our menu. Please check our menu page or ask our staff for recommendations based on your dietary preferences.";
+    }
+    
+    // Dine-in queries
+    if (lowerMessage.includes('dine') || lowerMessage.includes('eat in') || lowerMessage.includes('sit')) {
+      return "Yes, we offer dine-in service! Our restaurant has a welcoming atmosphere perfect for families, friends, or even a casual date. No reservations needed - just come on in!";
+    }
+    
+    // Reservation queries
+    if (lowerMessage.includes('reservation') || lowerMessage.includes('book') || lowerMessage.includes('reserve')) {
+      return "We generally don't require reservations as we can accommodate walk-ins. However, for large groups, you can contact us via WhatsApp at 079 790 7083 to make special arrangements.";
+    }
+    
+    // Parking queries
+    if (lowerMessage.includes('parking') || lowerMessage.includes('park')) {
+      return "Yes, we have ample parking available right outside our restaurant for your convenience.";
+    }
+    
+    // Job inquiries
+    if (lowerMessage.includes('job') || lowerMessage.includes('career') || lowerMessage.includes('hiring') || lowerMessage.includes('work')) {
+      return "For job inquiries, please contact us directly via WhatsApp at 079 790 7083 or use the contact form on our website. We're always looking for enthusiastic team members!";
+    }
+    
+    // Matchmaking game
+    if (lowerMessage.includes('game') || lowerMessage.includes('match') || lowerMessage.includes('play')) {
+      return "Our Matchmaking Game is a fun way to win discounts and prizes! Simply match icons like burgers and shakes to reveal your reward. You can play it on our website under the Games section. Ready to test your luck?";
+    }
+    
+    // Gratitude responses
     if (lowerMessage.includes('thanks') || lowerMessage.includes('thank you')) {
-      return "You're welcome! Is there anything else you'd like to know?";
+      return "You're welcome! I'm always here to help. Is there anything else you'd like to know about Steaks & Shakes?";
     }
     
-    return "I'm not sure I understand. Can you please rephrase your question? You can ask me about our menu, hours, location, or delivery options.";
+    // Default response for unknown queries
+    return "I'm not sure I understand. As Devon, I can help you with information about our menu, location, hours, delivery options, or special deals. Is there something specific you're looking for?";
   };
 
   return (
@@ -113,7 +170,7 @@ const ChatBot: React.FC = () => {
         <div className="bg-sns-black text-white p-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <MessageCircle size={20} />
-            <h3 className="font-semibold">Steaks & Shakes Assistant</h3>
+            <h3 className="font-semibold">Devon - Steaks & Shakes Assistant</h3>
           </div>
           <button 
             onClick={() => setIsOpen(false)}
