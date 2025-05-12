@@ -18,6 +18,7 @@ import OnlineDealsPage from "./pages/OnlineDealsPage";
 import ContactPage from "./pages/ContactPage";
 import SignInPage from "./pages/SignInPage";
 import OrderOnlinePage from "./pages/OrderOnlinePage";
+import CartPage from "./pages/CartPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +42,7 @@ const App = () => (
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/login" element={<SignInPage />} />
               <Route path="/order-online" element={<OrderOnlinePage />} />
+              <Route path="/cart" element={<CartPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
