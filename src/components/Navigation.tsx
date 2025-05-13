@@ -1,9 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ShoppingCart, Facebook, Instagram } from 'lucide-react';
 import logoPlaceholder from '../assets/logo-placeholder.png';
-
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,7 +20,6 @@ const Navigation: React.FC = () => {
     // Listen for storage events (when cart is updated)
     window.addEventListener('storage', updateCartCount);
     window.addEventListener('cartUpdated', updateCartCount);
-
     return () => {
       window.removeEventListener('storage', updateCartCount);
       window.removeEventListener('cartUpdated', updateCartCount);
@@ -38,19 +35,12 @@ const Navigation: React.FC = () => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  return (
-    <header 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black shadow-lg' : 'bg-black bg-opacity-80'
-      }`}
-    >
+  return <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black shadow-lg' : 'bg-black bg-opacity-80'}`}>
       <nav className="container-custom flex items-center justify-between py-4">
         {/* Logo */}
         <Link to="/" className="z-10">
@@ -85,11 +75,9 @@ const Navigation: React.FC = () => {
           {/* Cart Icon */}
           <Link to="/cart" className="relative text-white hover:text-sns-orange">
             <ShoppingCart size={24} />
-            {cartItems > 0 && (
-              <span className="absolute -top-2 -right-2 bg-sns-orange text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+            {cartItems > 0 && <span className="absolute -top-2 -right-2 bg-sns-orange text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                 {cartItems}
-              </span>
-            )}
+              </span>}
           </Link>
 
           {/* Auth Link */}
@@ -103,27 +91,18 @@ const Navigation: React.FC = () => {
           {/* Cart Icon - Mobile */}
           <Link to="/cart" className="relative text-white hover:text-sns-orange">
             <ShoppingCart size={24} />
-            {cartItems > 0 && (
-              <span className="absolute -top-2 -right-2 bg-sns-orange text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+            {cartItems > 0 && <span className="absolute -top-2 -right-2 bg-sns-orange text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                 {cartItems}
-              </span>
-            )}
+              </span>}
           </Link>
           
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-white focus:outline-none"
-          >
+          <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        <div
-          className={`fixed inset-0 bg-black bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-8 transform transition-transform duration-300 ease-in-out lg:hidden ${
-            isOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
-        >
+        <div className={`fixed inset-0 bg-black bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-8 transform transition-transform duration-300 ease-in-out lg:hidden ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <Link to="/" onClick={() => setIsOpen(false)} className="text-white text-xl hover:text-sns-gold">Home</Link>
           <Link to="/about" onClick={() => setIsOpen(false)} className="text-white text-xl hover:text-sns-gold">About Us</Link>
           <Link to="/menu" onClick={() => setIsOpen(false)} className="text-white text-xl hover:text-sns-gold">Our Menu</Link>
@@ -132,11 +111,7 @@ const Navigation: React.FC = () => {
           <Link to="/contact" onClick={() => setIsOpen(false)} className="text-white text-xl hover:text-sns-gold">Contact</Link>
           <Link to="/login" onClick={() => setIsOpen(false)} className="text-white text-xl hover:text-sns-gold">Sign In</Link>
           
-          <Link 
-            to="/order-online" 
-            onClick={() => setIsOpen(false)} 
-            className="btn-primary mt-4"
-          >
+          <Link to="/order-online" onClick={() => setIsOpen(false)} className="btn-primary mt-4">
             Order Now
           </Link>
           
@@ -150,8 +125,6 @@ const Navigation: React.FC = () => {
           </div>
         </div>
       </nav>
-    </header>
-  );
+    </header>;
 };
-
 export default Navigation;
