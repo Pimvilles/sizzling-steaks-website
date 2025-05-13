@@ -1,9 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ShoppingCart, Facebook, Instagram } from 'lucide-react';
 import logoImage from '/lovable-uploads/8aecd74d-bf8e-46ae-95ee-e669391bfea7.png';
-
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
