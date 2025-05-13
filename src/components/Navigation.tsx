@@ -1,7 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ShoppingCart, Facebook, Instagram } from 'lucide-react';
-import logoPlaceholder from '../assets/logo-placeholder.png';
+import logoImage from '/lovable-uploads/8aecd74d-bf8e-46ae-95ee-e669391bfea7.png';
+
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,7 +46,7 @@ const Navigation: React.FC = () => {
       <nav className="container-custom flex items-center justify-between py-4">
         {/* Logo */}
         <Link to="/" className="z-10">
-          <img src={logoPlaceholder} alt="Steaks & Shakes" className="h-12 md:h-16" />
+          <img src={logoImage} alt="Steaks & Shakes" className="h-16 md:h-20" />
         </Link>
 
         {/* Desktop Navigation */}
