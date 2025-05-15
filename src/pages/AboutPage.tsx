@@ -1,9 +1,6 @@
-
 import React from 'react';
-
 const AboutPage: React.FC = () => {
-  return (
-    <div className="pt-24">
+  return <div className="pt-24">
       {/* Hero Section */}
       <section className="bg-sns-black text-white py-16">
         <div className="container-custom text-center">
@@ -31,11 +28,7 @@ const AboutPage: React.FC = () => {
               </p>
             </div>
             <div className="w-full md:w-1/2">
-              <img 
-                src="https://images.unsplash.com/photo-1532635239-06e08db8f247?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                alt="Restaurant interior" 
-                className="rounded-lg shadow-lg w-full h-auto"
-              />
+              <img src="https://images.unsplash.com/photo-1532635239-06e08db8f247?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Restaurant interior" className="rounded-lg shadow-lg w-full h-auto" />
             </div>
           </div>
         </div>
@@ -86,29 +79,19 @@ const AboutPage: React.FC = () => {
             {/* Team Member 1 */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
               <div className="h-64">
-                <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
-                  alt="Mark Thompson - Founder" 
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Mark Thompson - Founder" className="w-full h-full object-cover" src="/lovable-uploads/109ba2c4-7e92-4526-9981-86c4e65e8911.jpg" />
               </div>
               <div className="p-4 text-center">
-                <h3 className="text-xl font-bold mb-1">Mark Thompson</h3>
+                <h3 className="text-xl font-bold mb-1">Devon Da Silva</h3>
                 <p className="text-sns-orange mb-3">Founder & Head Chef</p>
-                <p className="text-gray-600">
-                  With over 20 years of culinary experience, Mark created our signature burger recipes.
-                </p>
+                <p className="text-gray-600">With over 20 years of culinary experience, Devon created our signature burger recipes.</p>
               </div>
             </div>
             
             {/* Team Member 2 */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
               <div className="h-64">
-                <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
-                  alt="Sarah Williams - Manager" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Sarah Williams - Manager" className="w-full h-full object-cover" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="text-xl font-bold mb-1">Sarah Williams</h3>
@@ -122,18 +105,12 @@ const AboutPage: React.FC = () => {
             {/* Team Member 3 */}
             <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
               <div className="h-64">
-                <img 
-                  src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
-                  alt="John Baker - Chef" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="John Baker - Chef" className="w-full h-full object-cover" />
               </div>
               <div className="p-4 text-center">
-                <h3 className="text-xl font-bold mb-1">John Baker</h3>
+                <h3 className="text-xl font-bold mb-1">Sipho Gumede</h3>
                 <p className="text-sns-orange mb-3">Master Grill Chef</p>
-                <p className="text-gray-600">
-                  John's expertise ensures every patty is cooked to perfection.
-                </p>
+                <p className="text-gray-600">Sipho's expertise ensures every patty is cooked to perfection.</p>
               </div>
             </div>
           </div>
@@ -168,8 +145,6 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default AboutPage;
