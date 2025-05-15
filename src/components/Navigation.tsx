@@ -43,7 +43,7 @@ const Navigation: React.FC = () => {
   return <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black shadow-lg' : 'bg-black bg-opacity-80'}`}>
       <nav className="container-custom flex items-center justify-between py-4">
         {/* Logo */}
-        <Link to="/" className="z-10">
+        <Link to="/" className="z-10 bg-white">
           <img src={logoImage} alt="Steaks & Shakes" className="h-16 md:h-20" />
         </Link>
 
