@@ -89,7 +89,7 @@ const Navigation: React.FC = () => {
         {/* Mobile Menu Button */}
         <div className="lg:hidden flex items-center space-x-4">
           {/* Cart Icon - Mobile */}
-          <Link to="/cart" className="relative text-white hover:text-sns-orange">
+          <Link to="/cart" className="relative text-white hover:text-sns-orange bg-black">
             <ShoppingCart size={24} className="" />
             {cartItems > 0 && <span className="absolute -top-2 -right-2 bg-sns-orange text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                 {cartItems}
