@@ -51,7 +51,7 @@ const HomePage: React.FC = () => {
       <VideoHero videoSrc={placeholderVideoUrl} title="Steaks & Shakes" subtitle="The Best Burger In The Vaal" />
       
       {/* Promotions Section */}
-      <section className="bg-white">
+      <section className="bg-white py-[19px]">
         <div className="container-custom py-0">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Special Offers & Deals</h2>
         </div>
