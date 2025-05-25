@@ -7,7 +7,10 @@
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#F97316",
-  "orientation": "portrait",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["food", "restaurant"],
   "icons": [
     {
       "src": "/lovable-uploads/8aecd74d-bf8e-46ae-95ee-e669391bfea7.png",
@@ -20,6 +23,32 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Order Online",
+      "short_name": "Order",
+      "description": "Order food online",
+      "url": "/order-online",
+      "icons": [
+        {
+          "src": "/lovable-uploads/8aecd74d-bf8e-46ae-95ee-e669391bfea7.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "View Menu",
+      "short_name": "Menu",
+      "description": "Browse our menu",
+      "url": "/menu",
+      "icons": [
+        {
+          "src": "/lovable-uploads/8aecd74d-bf8e-46ae-95ee-e669391bfea7.png",
+          "sizes": "96x96"
+        }
+      ]
     }
   ]
 }
