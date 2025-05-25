@@ -52,7 +52,7 @@ const HomePage: React.FC = () => {
       
       {/* Promotions Section */}
       <section className="bg-white">
-        <div className="container-custom py-12">
+        <div className="container-custom py-0">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Special Offers & Deals</h2>
         </div>
         <PromoSlider promotions={promotionsData} />
